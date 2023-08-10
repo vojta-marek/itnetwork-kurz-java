@@ -17,11 +17,11 @@ public class Evidence {
     /**
      * Kolekce pro ukládání pojištěnců
      */
-    ArrayList<Pojistenec> databaze;
+    private ArrayList<Pojistenec> databaze;
     /**
      * Zobrazuje dnešní datum
      */
-    LocalDate aktualniDatum = LocalDate.now();
+    private LocalDate aktualniDatum = LocalDate.now();
     /**
      * Konstruktor v jehož těle probíhá inicializace kolekce dazabaze
      */
