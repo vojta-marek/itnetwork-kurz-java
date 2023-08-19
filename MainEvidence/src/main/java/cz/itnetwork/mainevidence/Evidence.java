@@ -61,7 +61,7 @@ public class Evidence {
      * @param prijmeniHledaneho
      */
     public void vyhledejPojistence(String jmenoHledaneho, String prijmeniHledaneho) {
-            boolean existuje = false;
+            boolean existuje = true;
             System.out.println();
             System.out.println("Výsledek/ky hledání:");
             System.out.println();
@@ -69,9 +69,9 @@ public class Evidence {
             for(Pojistenec pojistenec : databaze) {
                 if ((pojistenec.getJmeno().contains(jmenoHledaneho)) && (pojistenec.getPrijmeni().contains(prijmeniHledaneho))) {
                     System.out.println(pojistenec);
-                    existuje = true;
+                    existuje = false;
                 }
-            } if (existuje == false) {
+            } if (existuje) {
                 System.out.println(jmenoHledaneho + " " + prijmeniHledaneho + " bohužel v evidenci není..");
             }
             System.out.println();

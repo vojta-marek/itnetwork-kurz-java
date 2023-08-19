@@ -48,20 +48,20 @@ public class MainEvidence {
                 System.out.println("Zadejte přijmení:");
                 String prijmeni = scanner.nextLine().trim();
                 
-                boolean pokracovat = false;
-                while (pokracovat == false) {
+                boolean pokracovat = true;
+                while (pokracovat) {
                     // Vychytá chybné zadání textového řetězce místo číselné hodnoty
                     try {
                             System.out.println("Zadejte věk:");
                             int vek = Integer.parseInt(scanner.nextLine().trim());
-                            pokracovat = true;
-                            boolean pokracovatTelefon = false;
-                                while (pokracovatTelefon == false) {
+                            pokracovat = false;
+                            boolean pokracovatTelefon = true;
+                                while (pokracovatTelefon) {
                                     try {
                                         System.out.println("Zadejte telefonní číslo:");
                                         int telefonniCislo = Integer.parseInt(scanner.nextLine().trim());
                                         evidence.pridejPojistence(jmeno, prijmeni, vek, telefonniCislo);
-                                        pokracovatTelefon = true;
+                                        pokracovatTelefon = false;
                                     } catch (Exception ex) {
                                         System.out.println("Telefonní číslo musí být v číselném formátu, zkuste to znovu..");
                                     }
